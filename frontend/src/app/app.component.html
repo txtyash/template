@@ -1,0 +1,17 @@
+<div style="text-align: center; padding: 20px;">
+  <h2>Navigation</h2>
+  <div>
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a> |
+    <a href="/user/test">User Role Page</a> |
+    <a href="/admin/test">Admin Role Page</a>
+  </div>
+  @if(authService.isLoggedIn()){
+  <div style="margin-top: 10px;">
+    <button (click)="authService.logout()">Logout</button>
+  </div>
+  }
+</div>
+
+
+<router-outlet></router-outlet>
